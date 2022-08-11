@@ -1,5 +1,4 @@
 #include <fstream>
-#include <string>
 #include <TH1F.h>
 #include <TCanvas.h>
 #include <TLegend.h>
@@ -8,7 +7,7 @@ TH1F* hist(const char* fileName, const char* histName, int nBins, double min, do
 {
     std::ifstream inFile;
     inFile.open(fileName);
-    TH1F* hist = new TH1F(histName.c_str(), histName.c_str(), nBins, min, max);
+    TH1F* hist = new TH1F(histName, histName, nBins, min, max);
     double x;
     while (inFile >> x)
     {
