@@ -4,7 +4,7 @@
 #include <TCanvas.h>
 #include <TLegend.h>
 
-TH1F* hist(std::string fileName, std::string histName, int nBins, double min, double max, Color_t fillColor, Style_t fillStyle, Color_t lineColor, Style_t lineStyle)
+TH1F* hist(const char* fileName, const char* histName, int nBins, double min, double max, Color_t fillColor=0, Style_t fillStyle=0, Color_t lineColor=1, Style_t lineStyle=1)
 {
     std::ifstream inFile;
     inFile.open(fileName);
